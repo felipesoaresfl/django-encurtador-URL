@@ -22,8 +22,8 @@
     + cadastrar app no settings (procurar por installed_apps e coloca no final o 'nome-da-app')
 
     + criar uma class dentro de models
-    ex: class= Links(models,Model):
+    ex: class = Links(models,Model):
 
     + e logo após criar as colunas da tabela que vc vai usar
-    ex: link_redicrecionado = models.urlsfield()
+    ex: link_redirecionado = models.urlsfield()
         link_encurtado = models.charField(max_length=10)
