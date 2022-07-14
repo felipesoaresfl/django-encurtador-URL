@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-Br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{% static 'url/images/icon-emoji.png' %}"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'url/css/style.css' %}">
+    <title>URL 🤏</title>
+  </head>
+  <body>
+    <header>
+      <h1>URL 🤏</h1>
+    </header>
+    <main>
+      <div class="main_container">
+        <div class="container_bloco">
+          <div> 
+            <input type="url" placeholder="Insira o link aqui...">
+            <button>Encurtar!</button>
+          </div>
+        </div>
+      </div>
+      <div class="main_list">
+      <div class="list_bloco">
+        <ul> link encurtado </ul>
+      </div>
+    </div>
+    </main>
+    <footer>
+      <div class="footer_projeto">
+      <p>Projeto por <a href="https://github.com/felipesoaresfl">Felipe Soares</a>, <a href="https://github.com/fernandalizs">Fernanda Liz</a> e <a href="https://github.com/tabataf"> Tábata Faria</p></a>
+    </div>
+    <footer>
+  </body>
+</html>

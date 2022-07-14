@@ -12,3 +12,6 @@ def acha_minha_url(request, url_curta):
 
     return redirect(site.url_original)
 
+def pagina_inicial(request):
+    return render(request, "url/index.html")
+
