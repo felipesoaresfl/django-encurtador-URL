@@ -35,8 +35,10 @@
       <div class="main_list">
       <div class="list_bloco">
         <ul> 
-            <a href="127.0.0.1:8000/">127.0.0.1:8000/{{ url.url_curta }}</a>
-        </ul>
+          {%for x in url%}
+            <a href="127.0.0.1:8000/{{ url.url_curta }}">{{ x.url_curta }}</a>
+          {%endfor%}
+          </ul>
       </div>
     </div>
     </main>

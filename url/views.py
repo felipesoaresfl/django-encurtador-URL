@@ -18,7 +18,7 @@ def pagina_inicial(request):
         url = Links.objects.create(url_original=url_input)
         url.save()
 
-        url_curta = Links.objects.filter(url_original=url_input)
-        return render(request, "url/index.html", {'url': url_curta})
+        url_curta_a = Links.objects.filter(url_original=url_input)
+        return render(request, "url/index.html", {'url': url_curta_a })
     else:
         return render(request, "url/index.html")
