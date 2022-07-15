@@ -13,6 +13,11 @@ header {
   margin-bottom: 48px;
 }
 
+.main_text h2 {
+  padding-left: 144px;
+  margin-bottom: 8px;
+}
+
 .main_container {
   display: flex;
   justify-content: center;
@@ -46,7 +51,7 @@ header {
   width: 120px;
   height: 44px;
   border-radius: 8px;
-  background-color: #2acfcf;
+  background-color: #db006d;
   color: white;
   cursor: pointer;
   border: none;
@@ -55,7 +60,7 @@ header {
 }
 
 .container_bloco button:hover {
-  background-color: #11afaf;
+  background-color: #c60063;
 }
 
 .main_list {
