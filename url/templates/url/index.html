@@ -39,7 +39,7 @@
       <div class="list_bloco">
         <ul> 
           {%for x in url%}
-            <a href="127.0.0.1:8000/{{ url.url_curta }}">{{ x.url_curta }}</a>
+            <a target="_blank" href="{{ redirecionamento }}">{{ x.url_curta }}</a>
           {%endfor%}
           </ul>
       </div>

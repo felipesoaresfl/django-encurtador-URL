@@ -16,9 +16,15 @@ def pagina_inicial(request):
     if request.method == "POST":
         url_input = request.POST.get('url_input')
         url = Links.objects.create(url_original=url_input)
-        url.save()
+        url.save() 
 
         url_curta_a = Links.objects.filter(url_original=url_input)
-        return render(request, "url/index.html", {'url': url_curta_a })
+        redirecionamento = url_curta_a[0].url_curta
+        context = {
+            'url': url_curta_a,
+            'redirecionamento': redirecionamento,
+
+        }
+        return render(request, "url/index.html", context)
     else:
         return render(request, "url/index.html")
