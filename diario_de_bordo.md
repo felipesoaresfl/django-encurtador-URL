@@ -97,3 +97,8 @@ ex: class= Links(models.Model):
     + crie um SUPER usúario 🦸🏻‍♀️:
 
     rode o runserver
+
+    -----------------------------------------
+    15/07 fazendo a ligação do banco de dados e criando a ligação:
+
+    +
