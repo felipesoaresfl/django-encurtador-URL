@@ -13,5 +13,12 @@ def acha_minha_url(request, url_curta):
     return redirect(site.url_original)
 
 def pagina_inicial(request):
-    return render(request, "url/index.html")
+    if request.method == "POST":
+        url_input = request.POST.get('url_input')
+        url = Links.objects.create(url_original=url_input)
+        url.save()
 
+        url_curta = Links.objects.filter(url_original=url_input)
+        return render(request, "url/index.html", {'url': url_curta})
+    else:
+        return render(request, "url/index.html")

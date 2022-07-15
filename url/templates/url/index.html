@@ -24,15 +24,19 @@
     <main>
       <div class="main_container">
         <div class="container_bloco">
-          <div> 
-            <input type="url" placeholder="Insira o link aqui...">
-            <button>Encurtar!</button>
+          <div>
+          <form method="post" action="">{% csrf_token %} 
+            <input type="url" placeholder="https://exemplo.com" name="url_input">
+            <button type="submit">Encurtar!</button>
+          </form>
           </div>
         </div>
       </div>
       <div class="main_list">
       <div class="list_bloco">
-        <ul> {{ url_curta }} </ul>
+        <ul> 
+            <a href="127.0.0.1:8000/">127.0.0.1:8000/{{ url.url_curta }}</a>
+        </ul>
       </div>
     </div>
     </main>
