@@ -14,7 +14,7 @@ header {
 }
 
 .main_text h2 {
-  padding-left: 144px;
+  padding-left: 164px;
   margin-bottom: 8px;
 }
 
@@ -51,7 +51,7 @@ header {
   width: 120px;
   height: 44px;
   border-radius: 8px;
-  background-color: #db006d;
+  background-color: #ff0080;
   color: white;
   cursor: pointer;
   border: none;
@@ -60,7 +60,7 @@ header {
 }
 
 .container_bloco button:hover {
-  background-color: #c60063;
+  background-color: #ef00af;
 }
 
 .main_list {
@@ -86,4 +86,75 @@ header {
 .footer_projeto {
   text-align: center;
   margin: 16px 0;
+}
+
+@media (max-width: 768px) {
+  body {
+    margin: 5% 0% 0% 5%;
+  }
+
+  header {
+    margin-bottom: 48px;
+  }
+
+  .main_text h2 {
+    margin-bottom: 8px;
+    padding-left: 0%;
+  }
+
+  .main_container {
+    display: block;
+    width: 48vh;
+  }
+
+  .container_bloco {
+    width: 48vh;
+    height: 120px;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .container_bloco input {
+    width: 38vh;
+    height: 44px;
+    border-radius: 12px;
+    padding: 0 6px;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 0 8px 0;
+  }
+
+  .container_bloco button {
+    width: 40vh;
+    height: 44px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .main_list {
+    display: block;
+    width: 48vh;
+  }
+
+  .list_bloco {
+    padding-bottom: auto;
+    padding-top: auto;
+    width: 48vh;
+    height: 40px;
+    border-radius: 4px;
+  }
+
+  .list_bloco ul {
+    align-self: center;
+    padding-left: 16px;
+  }
+
+  .footer_projeto {
+    width: 48vh;
+    text-align: center;
+    margin: 300px 0 16px 0;
+  }
 }
