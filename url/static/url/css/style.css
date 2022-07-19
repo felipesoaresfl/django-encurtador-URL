@@ -14,7 +14,7 @@ header {
 }
 
 .main_text h2 {
-  padding-left: 164px;
+  padding-left: 18vh;
   margin-bottom: 8px;
 }
 
@@ -104,11 +104,11 @@ header {
 
   .main_container {
     display: block;
-    width: 48vh;
+    width: 48vw;
   }
 
   .container_bloco {
-    width: 48vh;
+    width: 90vw;
     height: 120px;
     border-radius: 8px;
     justify-content: center;
@@ -117,7 +117,7 @@ header {
   }
 
   .container_bloco input {
-    width: 38vh;
+    width: 75vw;
     height: 44px;
     border-radius: 12px;
     padding: 0 6px;
@@ -127,7 +127,7 @@ header {
   }
 
   .container_bloco button {
-    width: 40vh;
+    width: 79vw;
     height: 44px;
     border-radius: 8px;
     font-size: 18px;
@@ -136,13 +136,13 @@ header {
 
   .main_list {
     display: block;
-    width: 48vh;
+    width: 48vw;
   }
 
   .list_bloco {
     padding-bottom: auto;
     padding-top: auto;
-    width: 48vh;
+    width: 90vw;
     height: 40px;
     border-radius: 4px;
   }
@@ -153,8 +153,8 @@ header {
   }
 
   .footer_projeto {
-    width: 48vh;
+    width: 90vw;
     text-align: center;
-    margin: 300px 0 16px 0;
+    margin: 40vh 0 4vh 0;
   }
 }
