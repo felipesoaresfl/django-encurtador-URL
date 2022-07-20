@@ -35,17 +35,18 @@
           </div>
         </div>
       </div>
-      <div class="main_list">
+      <div class="main_list"> {% if request.method == 'POST' %}
       <div class="list_bloco">
         <ul> 
             <a target="_blank" href="{{ url_curta }}">{{ url_curta}}</a>
           </ul>
       </div>
+      {% endif %}
     </div>
     </main>
     <footer>
       <div class="footer_projeto">
-      <p>Projeto por <a href="https://github.com/felipesoaresfl">Felipe Soares</a>, <a href="https://github.com/fernandalizs">Fernanda Liz</a> e <a href="https://github.com/tabataf"> Tábata de Faria</p></a>
+      <p>Projeto por <a target="_blank" href="https://github.com/felipesoaresfl">Felipe Soares</a>, <a target="_blank" href="https://github.com/fernandalizs">Fernanda Liz</a> e <a target="_blank" href="https://github.com/tabataf"> Tábata de Faria</p></a>
     </div>
     <footer>
   </body>
