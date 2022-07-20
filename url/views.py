@@ -1,3 +1,4 @@
+from multiprocessing import context
 from django.shortcuts import render
 from django.shortcuts import redirect
 
@@ -14,24 +15,27 @@ def acha_minha_url(request, url_curta):
 
 def pagina_inicial(request):
     if request.method == "POST":
+        #pega o que foi digitado no input
         url_input = request.POST.get('url_input')
-        url_existente = Links.objects.filter(url_original=url_input).first()
-        if url_existente:
-            if url_existente.url_original == url_input:
-                context = {
-                    'url_curta': url_existente.url_curta,
-                }
+        if url_input != '':
+            url_existente = Links.objects.filter(url_original=url_input).first()
+            if url_existente: 
+                if url_existente.url_original == url_input:
+                    context = {
+                        'url_curta': url_existente.url_curta,
+                    }
+                else:
+                    url_curta = Links.objects.create(url_original=url_input)
+                    url_curta.save()
+                    context ={
+                        'url_curta': url_curta.url_curta,
+                    }
+                
             else:
                 url_curta = Links.objects.create(url_original=url_input)
                 url_curta.save()
                 context ={
                     'url_curta': url_curta.url_curta,
                 }
-              
-        else:
-             url_curta = Links.objects.create(url_original=url_input)
-             url_curta.save()
-             context ={
-                 'url_curta': url_curta.url_curta,
-             }
-        return render(request, "url/index.html", context)
+            return render(request, "url/index.html", context)
+    return render(request, "url/index.html")

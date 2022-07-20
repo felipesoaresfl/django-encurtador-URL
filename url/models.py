@@ -12,7 +12,6 @@ class Links(models.Model):
 
     #def para salvar a url curta no banco de dados autómaticamente com 8 digitos
     def save(self, *args, **kwargs):
-        base_link = 'https://url.herokuapp.com/'
         if not self.id:
-            self.url_curta = base_link + uuid.uuid4().hex[:8]          
+            self.url_curta = uuid.uuid4().hex[:8]          
         super(Links, self).save(*args, **kwargs)
