@@ -15,16 +15,23 @@ def acha_minha_url(request, url_curta):
 def pagina_inicial(request):
     if request.method == "POST":
         url_input = request.POST.get('url_input')
-        url = Links.objects.create(url_original=url_input)
-        url.save() 
-
-        url_curta_a = Links.objects.filter(url_original=url_input)
-        redirecionamento = url_curta_a[0].url_curta
-        context = {
-            'url': url_curta_a,
-            'redirecionamento': redirecionamento,
-
-        }
+        url_existente = Links.objects.filter(url_original=url_input).first()
+        if url_existente:
+            if url_existente.url_original == url_input:
+                context = {
+                    'url_curta': url_existente.url_curta,
+                }
+            else:
+                url_curta = Links.objects.create(url_original=url_input)
+                url_curta.save()
+                context ={
+                    'url_curta': url_curta.url_curta,
+                }
+              
+        else:
+             url_curta = Links.objects.create(url_original=url_input)
+             url_curta.save()
+             context ={
+                 'url_curta': url_curta.url_curta,
+             }
         return render(request, "url/index.html", context)
-    else:
-        return render(request, "url/index.html")
