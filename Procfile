@@ -1,1 +1,1 @@
-web: gunicorn nome_projetoMain.wsgi
+web: gunicorn encurtadorURL.wsgi
