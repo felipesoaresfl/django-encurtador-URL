@@ -6,7 +6,7 @@
 }
 
 body {
-  margin: 5% 10%;
+  margin: 5% 10% 1% 10%;
 }
 
 header {
@@ -90,7 +90,7 @@ header {
 
 .footer_projeto {
   text-align: center;
-  margin: 16px 0;
+  margin-top: 44vh;
 }
 
 @media (max-width: 768px) {
@@ -98,12 +98,7 @@ header {
     margin: 5% 0% 0% 5%;
   }
 
-  header {
-    margin-bottom: 48px;
-  }
-
   .main_text h2 {
-    margin-bottom: 8px;
     padding-left: 0%;
   }
 
@@ -114,29 +109,19 @@ header {
 
   .container_bloco {
     width: 90vw;
-    height: 120px;
-    border-radius: 8px;
     justify-content: center;
-    align-items: center;
     text-align: center;
   }
 
   .container_bloco input {
     width: 75vw;
-    height: 44px;
     border-radius: 12px;
     padding: 0 6px;
-    font-size: 18px;
-    font-weight: 500;
     margin: 0 0 8px 0;
   }
 
   .container_bloco button {
     width: 79vw;
-    height: 44px;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: 500;
   }
 
   .main_list {
@@ -145,26 +130,11 @@ header {
   }
 
   .list_bloco {
-    padding-bottom: auto;
-    padding-top: auto;
     width: 90vw;
-    height: 40px;
-    border-radius: 4px;
-  }
-
-  .list_bloco_p {
-    align-self: center;
-    padding-left: 16px;
-  }
-
-  .list_bloco ul {
-    align-self: center;
-    padding-left: 16px;
   }
 
   .footer_projeto {
     width: 90vw;
-    text-align: center;
     margin: 40vh 0 4vh 0;
   }
 }
