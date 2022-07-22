@@ -91,13 +91,14 @@ ex: class = Links(models,Model):
     deixar um terminal rodando o postgres
 
     + crie um SUPER usúario 🦸🏻‍♀️:
+    ./manage.py createsuperuser
 
     rode o runserver
 
     -----------------------------------------
-    15/07 fazendo a ligação do banco de dados e criando a o rederect 🤖:
+    15/07 fazendo a ligação do banco de dados e criando o redirect 🤖:
 
-    + Fizemos o redeirect (quando a pessoa clica na url vai direto pro site)
+    + Fizemos o redirect (quando a pessoa clica na url vai direto pro site)
 
     + fizemos também a ligação com o banco para que o link encurtado aparecesse na tela
 
@@ -124,7 +125,7 @@ ex: class = Links(models,Model):
             <a target="_blank" href="{{ url_curta }}">https://myencurt.herokuapp.com/{{ url_curta }}</a>
         </ul>
 
-    IMPORTANTE ❗❕: não enqueçam de sempre sechar um if com um {% endif %}!!!
+    IMPORTANTE ❗❕: não esqueçam de sempre fechar um if com um {% endif %}!!!
 
 
     + deploy no heroku
@@ -133,15 +134,13 @@ ex: class = Links(models,Model):
     mas calma?? deploy?? como??? ☠️
 
     Primeiramente vamos entender, o que é deploy?? 🤟🏻 -
-    O verbo deploy, em inglês, quer dizer implantar!! ou seja, faremos nossos usuarios finais finalmente terem acesso ao nosso site, em termos práticos, significa colocar no ar alguma aplicação que teve seu desenvolvimento concluído. De mesmo modo, quando um sistema sofre alguma melhoria ou alteração em seu código-fonte, implementar essa alteração ao sistema que está no ar também é um tipo de deploy.
+    O verbo deploy, em inglês, quer dizer implantar!! ou seja, faremos nossos usuários finais finalmente terem acesso ao nosso site, em termos práticos, significa colocar no ar alguma aplicação que teve seu desenvolvimento concluído. De mesmo modo, quando um sistema sofre alguma melhoria ou alteração em seu código-fonte, implementar essa alteração ao sistema que está no ar também é um tipo de deploy.
 
-    *ok, agora sim entendemos oq é esse raios de deploy, mas o que interresa é: COMO FAZ ISSO MEU DEUS 🙀?
+    *ok, agora sim entendemos oq é esse raios de deploy, mas o que interessa é: COMO FAZ ISSO MEU DEUS 🙀?
 
     + criar um app no heroku (e sim essa é a hora mais dificil, a hora de decidir um nome extremamente legal!!!)
 
-    +fazer o link do github (seu ortifolio) com o heroku -
-
-[](../../../../../files-pri/T8DJ2DE76-F03QNP72QG3/image.png)
+    +fazer o link do github (seu portifólio) com o heroku -
 
     + seleciona a branch que vc quer (sim, vocẽ é livre!🔓) e clica no botãozinho do build
 
@@ -150,7 +149,7 @@ ex: class = Links(models,Model):
     + aí você vai carregar os migrates para o heroku com o comanddo:
     heroku run python manage.py migrate --app nome_da_sua_app
 
-    + então você vai configurar o seu postgres no heroku (colocando as variaveis do host, user, port, password... do seu projeto) - você consegue ver essas informações no seu arquivo .env e ele te entrega os seus "novos" valores
+    + então você vai configurar o seu postgres no heroku (colocando as variáveis do host, user, port, password... do seu projeto) - você consegue ver essas informações no seu arquivo .env e ele te entrega os seus "novos" valores
 
     + ai você clica novamente no botãozinho do build (seu grande amigo)
 
