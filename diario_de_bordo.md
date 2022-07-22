@@ -1,4 +1,4 @@
-12/07
+12/07 🤖
 
 -> criar o repositório do 0 -
 -> html e css básico
@@ -23,20 +23,16 @@
 
     + criar uma class dentro de models
 
-<<<<<<< Updated upstream
 ex: class = Links(models,Model):
-=======
-ex: class= Links(models.Model):
-
-> > > > > > > Stashed changes
 
     + e logo após criar as colunas da tabela que vc vai usar
+
     ex: link_redirecionado = models.urlsfield()
         link_encurtado = models.charField(max_length=10)
 
 ---
 
-13/07
+13/07 🤖
 
 -> alterar o banco de dados para postgress
 -> função para incluir a url curta (automaticamente) na base de dados
@@ -45,7 +41,7 @@ ex: class= Links(models.Model):
     COMANDOS:
     + uuid.uuid4().hex[:8] - uuid é um modulo python que fornece um serviço de funções para hex, e logo em seguida inserimos o -hex- para definirmos a quantidade de caracter para a nossa url
 
-        # mas afinal, o que é hex irmão ????
+        # mas afinal, o que é hex irmão ❓❔
         Hex (hexidecimal- números de 0 a 9 e letras de A até F) é um conjunto de letras e números aleatórios de comprimento fixo que são conhecidas por resumir um dado ou criptografar um segredo!!
 
         # uuid4() - Gera um uuid aleatório
@@ -60,7 +56,7 @@ ex: class= Links(models.Model):
     + docker-compose.yml: faça a criacão!!
         O Docker Compose ajuda a definir e compartilhar aplicativos de vários contêineres. Com o Docker Compose, você pode criar um arquivo para definir os serviços. Com um único comando, você pode criar tudo ou derrubá-lo.
 
-    ## mudando o banco para postegress ##
+    💱 mudando o banco para postegress 💱
     + encontrar databases dentro de -settigs.py-
 
     + importar o Os - para importar as variavies de ambiente do .env
@@ -84,7 +80,7 @@ ex: class= Links(models.Model):
 
     + ctrl r = atalho para rodar runserver
 
-    # subir banco #
+    ⏫ subir banco ⏫
 
     abir um novo terminal, entrar na pasta do projeto e:
 
@@ -99,6 +95,69 @@ ex: class= Links(models.Model):
     rode o runserver
 
     -----------------------------------------
-    15/07 fazendo a ligação do banco de dados e criando a ligação:
+    15/07 fazendo a ligação do banco de dados e criando a o rederect 🤖:
 
-    +
+    + Fizemos o redeirect (quando a pessoa clica na url vai direto pro site)
+
+    + fizemos também a ligação com o banco para que o link encurtado aparecesse na tela
+
+    --------------------------------
+    18/07 🤖 -
+
+    + Alterações no mobille do css
+    + verificação no banco de dados
+    -------------------------------------------------
+    19/07 - 22/07 🤖
+
+    + Ajustando alguns bugs
+
+    + tirando a caixa cinza do css e deixando ela aparente apenas quando tiver uma url ou a mensagem de erro (uso de if):
+    ______________________________________________________________________________________________________________________
+
+    + na div mãe colocamos o seguinte comando: {% if request.method == 'POST' %} - que seria para ativar a caixa cinza quando tiver uma request (no nosso caso, essa request seria o aperto do botão)
+
+    + {% if url_curta == none %} <p class="list_bloco_p">Insira uma URL válida :)</p>  --Esse comando seria para quando a url for vazia exibir mensagem de erro!!
+
+    {% elif url_curta != '' %} - Já esse seria para fazer a exibição do proximo comando, que seria a url encurtada:
+
+        <ul>
+            <a target="_blank" href="{{ url_curta }}">https://myencurt.herokuapp.com/{{ url_curta }}</a>
+        </ul>
+
+    IMPORTANTE ❗❕: não enqueçam de sempre sechar um if com um {% endif %}!!!
+
+
+    + deploy no heroku
+    _______________________
+
+    mas calma?? deploy?? como??? ☠️
+
+    Primeiramente vamos entender, o que é deploy?? 🤟🏻 -
+    O verbo deploy, em inglês, quer dizer implantar!! ou seja, faremos nossos usuarios finais finalmente terem acesso ao nosso site, em termos práticos, significa colocar no ar alguma aplicação que teve seu desenvolvimento concluído. De mesmo modo, quando um sistema sofre alguma melhoria ou alteração em seu código-fonte, implementar essa alteração ao sistema que está no ar também é um tipo de deploy.
+
+    *ok, agora sim entendemos oq é esse raios de deploy, mas o que interresa é: COMO FAZ ISSO MEU DEUS 🙀?
+
+    + criar um app no heroku (e sim essa é a hora mais dificil, a hora de decidir um nome extremamente legal!!!)
+
+    +fazer o link do github (seu ortifolio) com o heroku -
+
+[](../../../../../files-pri/T8DJ2DE76-F03QNP72QG3/image.png)
+
+    + seleciona a branch que vc quer (sim, vocẽ é livre!🔓) e clica no botãozinho do build
+
+    + faça o heroku login - é utilizado para autenticar seu usuário no CLI. O usuário utilizado é o que você criou ao se cadastrar.
+
+    + aí você vai carregar os migrates para o heroku com o comanddo:
+    heroku run python manage.py migrate --app nome_da_sua_app
+
+    + então você vai configurar o seu postgres no heroku (colocando as variaveis do host, user, port, password... do seu projeto) - você consegue ver essas informações no seu arquivo .env e ele te entrega os seus "novos" valores
+
+    + ai você clica novamente no botãozinho do build (seu grande amigo)
+
+    + ai é só correr para o abraço 🎉 e clicar em open-app!!
+
+    ❌ uma diquinha para evitar o corno_job ❌
+
+    * habilite o build automatico no heroku!!!!
+
+    ----------------------------------------------------------------------------------------------------
