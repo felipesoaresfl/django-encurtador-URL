@@ -4,7 +4,7 @@ import uuid
 # Create your models here.
 
 class Links(models.Model):
-    url_original = models.URLField(unique=True)
+    url_original = models.URLField(max_length=2048, unique=True)
     url_curta = models.CharField(max_length=40, unique=True)
 
     def __str__(self):
