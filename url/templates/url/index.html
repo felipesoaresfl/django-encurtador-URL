@@ -37,9 +37,12 @@
       </div>
       <div class="main_list"> {% if request.method == 'POST' %}
       <div class="list_bloco">
+        {% if url_curta == none %} <p class="list_bloco_p">Insira uma URL válida :)</p> 
+        {% elif url_curta != '' %}
         <ul> 
-            <a target="_blank" href="{{ url_curta }}">https://myencurt.herokuapp.com/{{ url_curta}}</a>
-          </ul>
+            <a target="_blank" href="{{ url_curta }}">https://myencurt.herokuapp.com/{{ url_curta }}</a>
+          </ul> 
+        {% endif %}
       </div>
       {% endif %}
     </div>

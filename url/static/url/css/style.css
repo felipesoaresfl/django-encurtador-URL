@@ -78,6 +78,11 @@ header {
   display: flex;
 }
 
+.list_bloco_p {
+  align-self: center;
+  padding-left: 16px;
+}
+
 .list_bloco ul {
   align-self: center;
   padding-left: 16px;
@@ -145,6 +150,11 @@ header {
     width: 90vw;
     height: 40px;
     border-radius: 4px;
+  }
+
+  .list_bloco_p {
+    align-self: center;
+    padding-left: 16px;
   }
 
   .list_bloco ul {
