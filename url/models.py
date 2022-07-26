@@ -3,6 +3,7 @@ import uuid
 
 # Create your models here.
 
+
 class Links(models.Model):
     url_original = models.URLField(max_length=2048, unique=True)
     url_curta = models.CharField(max_length=40, unique=True)
@@ -10,8 +11,8 @@ class Links(models.Model):
     def __str__(self):
         return self.url_original
 
-    #def para salvar a url curta no banco de dados autómaticamente com 8 digitos
+    # def para salvar a url curta no banco de dados autómaticamente com 8 digitos
     def save(self, *args, **kwargs):
         if not self.id:
-            self.url_curta = uuid.uuid4().hex[:8]          
-        super(Links, self).save(*args, **kwargs)
+            self.url_curta = uuid.uuid4().hex[:8]
+            super(Links, self).save(*args, **kwargs)
