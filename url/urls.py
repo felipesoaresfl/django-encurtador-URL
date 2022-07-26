@@ -6,4 +6,5 @@ from . import views
 urlpatterns = [
     path("<url_curta>", views.acha_minha_url),
     path('', views.pagina_inicial),
+    path('erro', views.erro),
 ]
