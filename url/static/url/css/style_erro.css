@@ -1,46 +1,44 @@
-*{
-    background-color: #3b3054;
-    padding: 0;
-    border: 0;
-    margin: 0;
-    font-family: "Roboto", sans-serif;
+* {
+  background-color: #3b3054;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
-.image{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+.image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.error{
-    color: aliceblue;
-    padding-top: 1.5rem;
-    font-weight: 700;
-    font-size: larger;
-    text-align: center;
+.error {
+  color: aliceblue;
+  padding-top: 1.5rem;
+  font-weight: 700;
+  font-size: larger;
 }
 
-.botaozinho a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: aliceblue;
-    width: 14rem;
-    height: 2rem;
-    text-decoration: none;
-    border-radius: 15px;
-    margin-top: 1rem;
-    font-weight: 400;
+.botaozinho a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+  width: 14rem;
+  height: 2rem;
+  text-decoration: none;
+  border-radius: 15px;
+  margin-top: 1rem;
+  font-weight: 400;
 }
 
-.botaozinho a:active{
-    color: #ff0080;
+.botaozinho a:active {
+  color: #ff0080;
 }
 
-.botaozinho a:hover{
-    background-color: #28203b;
-    color: aliceblue;
-
+.botaozinho a:hover {
+  background-color: #28203b;
+  color: aliceblue;
 }
