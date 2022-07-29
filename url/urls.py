@@ -6,5 +6,4 @@ from . import views
 urlpatterns = [
     path("<url_inserida>", views.acha_minha_url),
     path('', views.pagina_inicial),
-    path('url/error', views.acha_minha_url),
 ]
