@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'url/css/style_erro.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <title>uepa</title>
+</head>
+
+<body>
+    <audio autoplay="autoplay" src="{% static 'url/som/pare.mp3' %}"></audio>
+
+    <div class="image">
+        <img src="{% static 'url/images/404.png' %}" alt="">
+        <p class="error">Opss... Essa página não existe!</p>
+        <div class="botaozinho"> <a href="https://myencurt.herokuapp.com">Volte para a página inicial</a>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

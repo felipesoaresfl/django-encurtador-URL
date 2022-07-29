@@ -1,4 +1,5 @@
 
+from django.http import HttpResponse
 from django.shortcuts import render
 from django.shortcuts import redirect
 from .models import Links
@@ -7,10 +8,12 @@ from .models import Links
 # fazer o redirect para a url original
 
 
-def acha_minha_url(request, url_curta):
-    site = Links.objects.get(url_curta=url_curta)
-    return redirect(site.url_original)
-
+def acha_minha_url(request, url_inserida):
+    try:
+        site = Links.objects.get(url_curta=url_inserida)
+        return redirect(site.url_original)
+    except:    
+        return render(request, "url/error.html", {})
 
 def pagina_inicial(request):
     if request.method == "POST":
