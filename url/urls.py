@@ -4,7 +4,7 @@ from . import views
 
 # insere a url curta na rota
 urlpatterns = [
-    path("<url_curta>", views.acha_minha_url),
+    path("<url_inserida>", views.acha_minha_url),
     path('', views.pagina_inicial),
-    path('erro', views.erro),
+    path('url/error', views.acha_minha_url),
 ]
